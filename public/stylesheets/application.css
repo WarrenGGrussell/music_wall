@@ -1,0 +1,12 @@
+body {
+  width: 100%;
+  height: 100%;
+  background: url("http://scontent-a.cdninstagram.com/hphotos-xpa1/t51.2885-15/10471831_827313070613883_675444889_n.jpg") top left no-repeat;
+  background-size: cover;
+  background-color: black;
+  text-align: center;
+}
+
+h1 {
+  color: red
+}
