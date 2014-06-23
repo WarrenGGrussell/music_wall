@@ -9,6 +9,15 @@ get '/tunes' do
 end
 
 get '/tunes/new' do 
-  erb :new
+  erb :'tunes/new'
+end
+
+post '/tunes' do
+  @tune = Tune.new(
+    song_title: params[:song_title],
+    author: params[:author]
+  )
+  @tune.save
+  redirect '/tunes/new'
 end
 
