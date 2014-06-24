@@ -1,6 +1,6 @@
 <% @tunes.each do |tune| %>
   <div class="tune">
-    <h1><%= tune.song_title %> <small>(by: <%= tune.author %>)</small></h1>
+    <h1><a href="/tunes/<%= tune.id %>"><%= tune.song_title %></a> <small>(by: <%= tune.author %>)</small></h1>
     <h6>Warren you crazzzy</h6>
   </div>
 <% end %>

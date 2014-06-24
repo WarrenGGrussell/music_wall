@@ -1,0 +1,25 @@
+<form action="/signup" method="post">
+    <h4>Email:</h4>
+    <div class="center">
+      <input type="text" name="email" value="<%= @user && @user.email %>">
+    </div>
+    <br>
+    <h4>Password:</h4>
+    <div class="center">
+        <input type="text" name="password" value="<%= @user && @user.password %>">
+    </div>
+    <br>
+    <div class="center">
+      <input class="btn btn-default" type="submit" value="Sign up">
+    </div>
+</form>
+<% if @user && @user.errors.any? %>
+  <div>
+    <strong>Email or password seems invalid, please fix:</strong>
+    <ul>
+      <% @user.errors.full_users.each do |user| %>
+        <li><%= user %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

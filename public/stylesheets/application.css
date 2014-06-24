@@ -10,3 +10,8 @@ body {
 h1 {
   color: red
 }
+
+.tune {
+  background-color: white;
+  width: 25%;
+}

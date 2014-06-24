@@ -1,3 +1,13 @@
+<% if @tune && @tune.errors.any? %>
+  <div>
+    <strong>Some issues with your tune, please fix them:</strong>
+    <ul>
+      <% @tune.errors.full_tunes.each do |tune| %>
+        <li><%= tune %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <form method="post" action="/tunes">
   <div>
     <label>Song Title:</label>
